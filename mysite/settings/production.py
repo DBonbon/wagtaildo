@@ -8,3 +8,9 @@ ALLOWED_HOSTS = ['*'] # os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 #     from .local import *
 # except ImportError:
 #     pass
+
+from .base import *
+
+DEBUG = True
+SECRET_KEY = 'my_secret_key'
+ALLOWED_HOSTS = ['*']
