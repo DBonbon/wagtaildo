@@ -1,8 +1,8 @@
 from .base import *
 
-DEBUG = int(os.environ.get("DEBUG", default=1))
-SECRET_KEY = os.environ.get("SECRET_KEY")
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+DEBUG = True # int(os.environ.get("DEBUG", default=1))
+SECRET_KEY = "dbaa1_i7%*3r9-=z-+_mz4r-!qeed@(-a_r(g@k8jo8y3r27%m" # os.environ.get("SECRET_KEY")
+ALLOWED_HOSTS = ['*'] # os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # try:
 #     from .local import *
