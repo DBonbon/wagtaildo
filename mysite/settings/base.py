@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from urllib.parse import urlparse
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -90,6 +91,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -97,6 +99,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#
+#     'default': {
+#
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         "NAME": 'db', # os.environ.get("SQL_DATABASE"),
+#         "USER": 'db_user', #os.environ.get("SQL_USER", "user"),
+#         "PASSWORD": '2020', # os.environ.get("SQL_PASSWORD", "password"),
+#         "HOST": 'db', #os.environ.get("SQL_HOST", "localhost"),
+#         "PORT": '5432', #os.environ.get("SQL_PORT", "5432"),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -159,6 +173,6 @@ MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = "mysite"
 
-# Base URL to use when referring to full URLs within the Wagtail admin backend -
+# Base URL to use whLiens, images, information cliquez pour explorer notre catalogen referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
